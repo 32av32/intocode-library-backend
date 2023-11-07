@@ -5,11 +5,11 @@ const URL = 'mongodb+srv://32av32:32av32@cluster0.7fiabdg.mongodb.net/intocode-l
 
 
 app.use(express.json())
-app.use(require('./routes/users.route'))
-app.use(require('./routes/books.route'))
-app.use(require('./routes/comments.route'))
-app.use(require('./routes/genres.route'))
-app.use(require('./routes/admin.route'))
+app.use('/users', require('./routes/users.route'))
+app.use('/books', require('./routes/books.route'))
+app.use('/comments', require('./routes/comments.route'))
+app.use('/genres', require('./routes/genres.route'))
+app.use('/admin', require('./routes/admin.route'))
 
 async function connectToMongoose(url) {
     try{
