@@ -3,11 +3,11 @@ const Schema = mongoose.Schema
 const userSchema = new Schema({
     name: {
         type: String,
-        require: true
+        required: true
     },
     email: {
         type: String,
-        require: true
+        required: true
     },
     books: [{
         type: Schema.Types.ObjectId,

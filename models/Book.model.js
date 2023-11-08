@@ -3,16 +3,16 @@ const Schema = mongoose.Schema
 const bookSchema = new Schema({
     title: {
         type: String,
-        require: true
+        required: true
     },
     author: {
         type: String,
-        require: true
+        required: true
     },
     genres: [{
         type: Schema.Types.ObjectId,
         ref: 'Genre',
-        require: true
+        required: true
     }],
     borrower: {
         type: Schema.Types.ObjectId,

@@ -3,17 +3,17 @@ const Schema = mongoose.Schema
 const commentSchema = new Schema({
     text: {
         type: String,
-        require: true
+        required: true
     },
     book: {
         type: Schema.Types.ObjectId,
         ref: 'Book',
-        require: true
+        required: true
     },
     user: {
         type: Schema.Types.ObjectId,
         ref: 'User',
-        require: true
+        required: true
     }
 })
 
